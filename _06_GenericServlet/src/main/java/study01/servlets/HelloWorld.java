@@ -20,6 +20,13 @@ public class HelloWorld extends HttpServlet {
 	@Override
 		public void init() throws ServletException {
 			System.out.println("init()호출");
+			
+		}
+	
+	@Override
+		protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+			System.out.println("service()호출");
+			super.service(req, resp);
 		}
 
 	@Override
