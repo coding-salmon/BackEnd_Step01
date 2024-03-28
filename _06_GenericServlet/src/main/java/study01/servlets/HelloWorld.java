@@ -2,36 +2,29 @@ package study01.servlets;
 
 import java.io.IOException;
 
+import javax.servlet.GenericServlet;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
-/*서블릿 인터페이스 (서블릿 생태 주기 최상위)
- *제너릭서블릿 추상 클래스 임플리먼트 서블릿*
- *httpServel 추상 크랠스느 익스텐즈 제네ㄺ서블릿
- */
+/* GenericServlet은 1개의 추상메서드를 가진 추상 클래스이다.
+ * servlet 인터페이스가 상속시켜준 나머지 메서드는 default로 구현되어 있고
+ * 반드시 서비스에 필요한 service만 개발자가 구현하도록 한다.
+ * */
 
 @SuppressWarnings("serial")
-public class HelloWorld extends HttpServlet {
-	
-	@Override
-		public void init() throws ServletException {
-			System.out.println("init()호출");
-			
-		}
-	
-	@Override
-		protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-			System.out.println("service()호출");
-			super.service(req, resp);
-		}
+public class HelloWorld extends GenericServlet {
 
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println("doGet()호출");
+	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
+		System.out.println("service() 호출");
+		
 	}
+
+
 }
-	
+
+
+
+
+

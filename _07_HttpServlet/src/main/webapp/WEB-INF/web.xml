@@ -9,17 +9,19 @@
    -->
   
   <!-- 서블릿 선언(톰캣이 web.xml을 읽어서, 객체 생성 후 브라우저에서 매핑된 주소가 들어오면 이 객체를 호출한다. -->
+  <!-- 
   <servlet>
   	<servlet-name>Hello</servlet-name>
   	<servlet-class>study01.servlets.HelloWorld</servlet-class>
   </servlet>
-  
+   -->
   <!-- 주소와 매핑 -->
+  <!-- 
   <servlet-mapping>
   	<servlet-name>Hello</servlet-name>
   	<url-pattern>/Hello</url-pattern>
   </servlet-mapping>
-  
+   -->
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
