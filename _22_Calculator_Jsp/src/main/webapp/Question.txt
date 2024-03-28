@@ -1,0 +1,15 @@
+1. MemberAddServlet과 MemberListServlet도 컨텍스트 매개변수를 사용
+
+2. MemberlistServlet의 부모 클래스는 GenericServlet -> HtttpServlet으로 교체
+	service() -> doGet()으로 교체
+	
+3. 회원정보 삭제 
+
+삭제 요청 url : /member/delete?no= 삭제할 회원 mno
+삭제 서블릿 : MemberDeleteServlet
+
+<a href
+
+4. /member/list : 페이지에서 각항목 끝에 삭제 링크 추가 
+
+5. 회원 업데이트 화면에서 삭제 버튼 추가
